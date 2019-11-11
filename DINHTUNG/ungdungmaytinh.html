@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>CACULATOR</h1>
+<input type="text" id="1">&nbsp;&nbsp;<input type="text" id="2">
+<table>
+    <tr>
+        <td><input type="button" onclick="caculator('+')" value="+"></td>
+        <td><input type="button" onclick="caculator('-')" value="-"></td>
+        <td><input type="button" onclick="caculator('x')" value="x"></td>
+        <td><input type="button" onclick="caculator(':')" value=":"></td>
+    </tr>
+</table>
+<p id="a"></p>
+<script>
+    function caculator(cal) {
+        let s1 = parseFloat(document.getElementById(1).value);
+        let s2 = parseFloat(document.getElementById(2).value);
+        let kq = 0;
+        switch (cal) {
+            case '+':
+                kq = s1 + s2 ;
+                document.getElementById('a').innerHTML = kq ;
+                break;
+            case '-':
+                kq = s1 - s2 ;
+                document.getElementById('a').innerHTML = kq ;
+                break;
+            case 'x':
+                kq = s1 * s2 ;
+                document.getElementById('a').innerHTML = kq ;
+                break;
+            case ':':
+                kq = s1 / s2 ;
+                document.getElementById('a').innerHTML = kq ;
+                break;
+            default:
+                document.getElementById('a').innerHTML = kq;
+        }
+    }
+</script>
+</body>
+</html>
