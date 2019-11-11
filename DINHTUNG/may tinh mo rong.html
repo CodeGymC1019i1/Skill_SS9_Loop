@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<STYLE>
+    #calMachine {
+        width: 200px;
+        margin: auto;
+        border: #808080 1px solid ;
+        padding: 20px;
+    }
+    #calMachine p {
+        text-align: center;
+    }
+    input {width: 200px}
+    button { width: 40px; height: 20px}
+</STYLE>
+<body>
+<div id="calMachine">
+    <input type="text" id="screen">
+    <p>
+        <button value="1" onclick="showScreen(value)">1</button>
+        <button value="2" onclick="showScreen(value)">2</button>
+        <button value="3" onclick="showScreen(value)">3</button>
+        <button value="+" onclick="showScreen(value)">+</button>
+    </p>
+    <p>
+        <button value="4" onclick="showScreen(value)">4</button>
+        <button value="5" onclick="showScreen(value)">5</button>
+        <button value="6" onclick="showScreen(value)">6</button>
+        <button value="-" onclick="showScreen(value)">-</button>
+    </p>
+    <p>
+        <button value="7" onclick="showScreen(value)">7</button>
+        <button value="8" onclick="showScreen(value)">8</button>
+        <button value="9" onclick="showScreen(value)">9</button>
+        <button value="x" onclick="showScreen(value)">x</button>
+    </p>
+    <p>
+        <button  onclick="remove()">C</button>
+        <button value="0" onclick="showScreen(value)">0</button>
+        <button  onclick="cal()">=</button>
+        <button value=":" onclick="showScreen(value)">:</button>
+    </p>
+    <script>
+        let  screen=document.getElementById('screen');
+        function showScreen(value) {
+            screen.value  += value;
+        }
+        function cal() {
+            let result = eval(screen.value);
+            screen.value = result;
+        }
+        function remove() {
+            screen.value= " "
+        }
+    </script>
+</div>
+</body>
+</html>
