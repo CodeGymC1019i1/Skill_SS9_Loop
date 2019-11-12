@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    function calculate30mod7() {
+        let i=1;
+        let tong=0;
+        let count = 0;
+
+        while ( count < 30 ){
+            if (i%7==0){
+                document.write(i +'<br>')
+                tong+=i;
+                count++;
+            }
+            i++
+        }
+        document.write('tong='+ tong)
+    }
+calculate30mod7()
+
+</script>
+
+</body>
+</html>

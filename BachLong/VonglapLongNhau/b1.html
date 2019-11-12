@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+    let spc = "<table cellspacing='0' cellpadding='3' border='1'>";
+
+    for (i = 1; i <= 10; i++) {
+        spc = spc + "<tr>";
+        for (j = 1; j <= 10; j++) {
+                spc = spc +"<td>" + i*j+ "</td>"
+        }
+
+        spc = spc + "</tr>";
+    }
+
+    spc = spc + "</table>";
+
+    document.write(spc)
+
+</script>
+
+</body>
+</html>

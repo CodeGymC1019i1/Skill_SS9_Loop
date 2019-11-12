@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    function displayFibonanci() {
+        let number;
+        let count = 0;
+        let st1 = 0;
+        let st2 = 1;
+        let st3;
+
+        while (st1 % 5 != 0) {
+
+            st3 = st2 + st1;
+            st1 = st2;
+            st2 = st3;
+        }
+        document.write(st1);
+
+
+        //  number = prompt('nhap so fibonanci can hien thi', )
+        //  document.write(st2);
+        // while (count<number){
+        // let st3 = st2 + st1;
+        // document.write(" " + st3);
+        // st1=st2;
+        // st2=st3;
+        // count ++;
+        // }
+    }
+
+    displayFibonanci()
+
+
+</script>
+
+</body>
+</html>

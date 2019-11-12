@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    function displayFibonanci() {
+        let number;
+        let count = 0;
+        let st1 = 0;
+        let st2 = 1;
+        let tong = 0;
+        number = prompt('nhap so fibonanci can hien thi',);
+        document.write(st2);
+        while (count < number) {
+            tong += st2;
+            let st3 = st2 + st1;
+            // document.write(" " + st3);
+            st1 = st2;
+            st2 = st3;
+            count++;
+        }
+        document.write( 'tong =' + tong)
+    }
+displayFibonanci()
+
+
+</script>
+
+</body>
+</html>

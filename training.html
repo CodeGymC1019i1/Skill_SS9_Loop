@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    function checkPrime(n) {
+        if (n<2) {
+            return false;
+        }
+        for (let i = 2; i < n ; i++) {
+            if (n % i == 0) {
+                return false
+            }
+
+        }return true
+    }
+
+    function listPrime() {
+        let number;
+        let count=0;
+        let j=1;
+
+        number = parseInt(prompt('Nhap so can hien thi',));
+        while (count<number) {
+            if (checkPrime(j)==true){
+                document.write(j + '<br>');
+                count ++
+            }
+            j ++
+        }
+    }
+    listPrime();
+
+</script>
+</body>
+</html>
