@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SoNguyenTo</title>
+</head>
+<body>
+
+<script>
+    function checkPrimes(n) {
+        if (n < 2) {
+            return false
+        }
+        for (i = 2; i < n; i++) {
+            if (n % i == 0) {
+                return false
+            }
+            return true
+        }
+    }
+    function listPrimes() {
+        let count = 0;
+        let j = 1;
+        let number;
+        number = prompt('Nhap so can hien thi')
+        while (count < number) {
+            if (checkPrimes(j) == true) {
+                document.write(j + "<br>");
+                count++
+            }
+            j++
+        }
+    }
+    listPrimes()
+</script>
+
+</body>
+</html>
